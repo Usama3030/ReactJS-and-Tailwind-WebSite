@@ -6,7 +6,7 @@ import Card3 from "../assets/card_3.png";
 
 function ProgramOverview() {
   return (
-    <div id="PROGRAM_OVERVIEW" class=" min-h-auto my-8 bg-white">
+    <div id="PROGRAM_OVERVIEW" class=" min-h-auto w-full my-8 bg-white">
       <div className="program mx-10">
         <h2 className="text-5xl lg:text-6xl text-center font-extrabold font-[FatFrank] text-[#3C7278] mb-4">
           program overview

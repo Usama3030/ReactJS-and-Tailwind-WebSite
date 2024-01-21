@@ -12,7 +12,7 @@ const Navbar = () => {
     { href: "#MEET_ELI", text: "MEET ELI" },
     { href: "#PROGRAM_OVERVIEW", text: "PROGRAM OVERVIEW" },
     { href: "#ASK_MY_COW", text: "ASK MY COW" },
-    { href: "#link5", text: "BOOK A CALL" },
+    { href: "#BOOK_A_CALL", text: "BOOK A CALL" },
   ];
 
   const handleResize = () => {

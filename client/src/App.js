@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
 import Header from "./Components/Header";
-// import Footer from "./Components/Footer";
-// import BookACall from "./Components/BookACall";
+import Footer from "./Components/Footer";
+import BookACall from "./Components/BookACall";
 import MeetEli from "./Components/MeetEli";
 import Mission from "./Components/Mission";
 import MeetEliDetail from "./Components/MeetEliDetail";
@@ -19,9 +19,8 @@ function App() {
       <MeetEliDetail />
       <ProgramOverview />
       <AskMyCow />
-      {/*
       <BookACall />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }
