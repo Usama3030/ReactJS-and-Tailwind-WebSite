@@ -1,11 +1,15 @@
-require("dotenv").config();
 const User = require("../models/users");
-const mongoose = require("mongoose");
 
 // register api
 exports.registerUser = async (req, res) => {
   try {
     const { name, email, organization, role } = req.body;
+
+    // Check if user already exists
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ error: "Email already exists" });
+    }
 
     const newUser = new User({
       name,
