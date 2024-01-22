@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const port = process.env.PORT || 8000;
 const userRoutes = require("./routes/userRoutes");
 const cors = require("cors");
+const mongoose = require("./db/db");
 
 app.use(cors());
 
