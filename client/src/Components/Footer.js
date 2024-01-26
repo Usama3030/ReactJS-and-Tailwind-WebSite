@@ -1,17 +1,17 @@
 import React from "react";
 import "./style.css";
-import FacebookLogo from "../assets/Facebook_Logo.png";
-import TwitterLogo from "../assets/Twitter_new_X_logo.png";
-import InstagramLogo from "../assets/instagram_Logo.png";
+import FacebookLogo from "../assets/images/Facebook_Logo.png";
+import TwitterLogo from "../assets/images/Twitter_new_X_logo.png";
+import InstagramLogo from "../assets/images/instagram_Logo.png";
 
 function Footer() {
   return (
     <div id="FOOTER" class=" min-h-auto w-full bg-white">
       <div className="Footer text-center w-5/6 lg:w-3/5 mx-auto">
-        <h2 className="text-5xl lg:text-6xl font-extrabold font-[FatFrank] text-[#94A8AE] mt-6">
+        <h2 className="text-5xl lg:text-6xl font-FatFrank text-[#94A8AE] mt-6 overflow-y-hidden">
           join the herd on social
         </h2>
-        <p className="text-md mt-4">
+        <p className="text-md mt-4 font-AvenirNext">
           Follow "Me and My Cow" on Instagram, Facebook, and Twitter to connect
           with our compassionate community. We're constantly moo-ving, sharing
           newly developed plant-based recipes, franchise success stories,

@@ -1,12 +1,3 @@
-// /** @type {import('tailwindcss').Config} */
-// module.exports = {
-//   content: ["./src/**/*.{js,jsx,ts,tsx}"],
-//   theme: {
-//     extend: {},
-//   },
-//   plugins: [],
-// };
-
 const plugin = require("tailwindcss/plugin");
 const colors = require("tailwindcss/colors");
 
@@ -50,6 +41,10 @@ module.exports = {
       },
       fontSize: {
         55: "55rem",
+      },
+      fontFamily: {
+        FatFrank: "FatFrank",
+        AvenirNext: "AvenirNext"
       },
       opacity: {
         80: ".8",
