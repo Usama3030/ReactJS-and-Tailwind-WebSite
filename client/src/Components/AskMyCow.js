@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 import AI_cow from "../assets/images/AI_Cow.png";
 import layer from "../assets/images/Vector.png";
@@ -14,6 +14,31 @@ function AskMyCow() {
 
     // Update the 'answer' state with the API response
     setAnswer(data.answer);
+  };
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://chatling.ai/js/embed.js";
+    script.async = true;
+    script.setAttribute("data-id", "1182799319");
+    script.id = "chatling-embed-script";
+    script.onload = () => {
+      window.Chatling &&
+        window.Chatling.on("ready", function () {
+          console.log("Chatling is ready");
+        });
+    };
+    document.body.appendChild(script);
+  }, []);
+
+  const openChat = () => {
+    const chatling = window.Chatling;
+    if (chatling) {
+      chatling.open();
+    } else {
+      console.log("Chatling is not ready yet, trying again in 1 second");
+      setTimeout(openChat, 1000);
+    }
   };
 
   return (
