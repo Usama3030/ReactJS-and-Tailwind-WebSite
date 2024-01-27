@@ -8,7 +8,7 @@ import Mission from "./Components/Mission";
 import MeetEliDetail from "./Components/MeetEliDetail";
 import ProgramOverview from "./Components/ProgramOverview";
 import AskMyCow from "./Components/AskMyCow";
-// import Navbar from "./Components/Navbar";
+import 'aos/dist/aos.css'
 
 function App() {
   return (

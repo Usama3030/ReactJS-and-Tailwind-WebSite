@@ -1,14 +1,14 @@
 import React from "react";
 import "./style.css";
-import Card1 from "../assets/card_1.png";
-import Card2 from "../assets/card_2.png";
-import Card3 from "../assets/card_3.png";
+import Card1 from "../assets/images/card_1.png";
+import Card2 from "../assets/images/card_2.png";
+import Card3 from "../assets/images/card_3.png";
 
 function ProgramOverview() {
   return (
-    <div id="PROGRAM_OVERVIEW" class=" min-h-auto w-full my-8 bg-white">
-      <div className="program mx-10">
-        <h2 className="text-5xl lg:text-6xl text-center font-extrabold font-[FatFrank] text-[#3C7278] mb-4">
+    <div id="PROGRAM_OVERVIEW" class=" min-h-auto w-full my-16 bg-white">
+      <div data-aos="fade-down" className="program mx-10">
+        <h2 className="text-5xl lg:text-6xl text-center font-FatFrank text-[#3C7278] mb-4">
           program overview
         </h2>
         <p className="text-md text-center">
@@ -39,9 +39,9 @@ function ProgramOverview() {
 
 const Card = ({ logo, title, text }) => {
   return (
-    <div className="max-w-sm rounded-xl overflow-hidden shadow-2xl p-6 mb-8 mx-2 mt-4 h-92 w-72 bg-white">
+    <div data-aos="fade-up" className="max-w-sm rounded-xl overflow-hidden shadow-2xl p-6 mb-8 mx-2 mt-4 h-92 w-72 bg-white">
       <div className="text-center mt-4">
-        <h2 className="text-4xl text-center font-extrabold font-[FatFrank] text-[#3C7278] mb-4 mx-8">
+        <h2 className="text-4xl text-center font-FatFrank text-[#94A8AE] mb-4 mx-8">
           {title}
         </h2>
         <p className="mt-2 text-black text-sm mb-10">{text}</p>
