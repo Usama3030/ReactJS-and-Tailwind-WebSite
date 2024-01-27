@@ -1,7 +1,64 @@
-import React from "react";
+import React, {useState} from "react";
+import axios from "axios";
 import "./style.css";
 
 function BookACall() {
+  const [formData, setFormData] = useState({
+    name: "",
+    organization: "",
+    title: "",
+    email: "",
+  });
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const validateForm = () => {
+    let formErrors = {};
+    let formIsValid = true;
+
+    if (!formData["name"]) {
+      formIsValid = false;
+      formErrors["name"] = "*Name is required.";
+    }
+
+    if (!formData["email"]) {
+      formIsValid = false;
+      formErrors["email"] = "*Email is required.";
+    }
+
+    if (typeof formData["email"] !== "undefined") {
+      var pattern = new RegExp(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/);
+      if (!pattern.test(formData["email"])) {
+        formIsValid = false;
+        formErrors["email"] = "*Please enter valid email.";
+      }
+    }
+
+    setErrors(formErrors);
+    return formIsValid;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(formData);
+    if (validateForm()) {
+      try {
+        const response = await axios.post(
+          `${process.env.REACT_APP_NODE_API}/api/signup`,
+          formData
+        );
+        console.log(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  };
   return (
     <div id="BOOK_A_CALL" class=" min-h-auto mb-0 w-full bg-[#F4F4F4]">
       <div className="BookCall text-center w-5/6 lg:w-3/5 mx-auto">
@@ -18,44 +75,54 @@ function BookACall() {
           book a motivational speaking engagement with Eli.
         </p>
       </div>
-      <form class="w-full max-w-lg mt-12 m-auto">
-        <div class="flex flex-wrap -mx-3 mb-6">
-          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-            <p class="text-red-500 text-xs absolute -my-4 mx-4">
-              Form Field Required
-            </p>
+      <form class="w-full max-w-lg mt-12 m-auto" onSubmit={handleSubmit}>
+      <div className="flex flex-wrap -mx-3 mb-6">
+          <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+            <p className="text-red-500 text-xs h-4">{errors.name}</p>
             <input
-              class="appearance-none block w-full -pr-20 bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-              id="grid-first-name"
+              className={`appearance-none block w-full bg-gray-200 text-gray-700 border ${
+                errors.email ? "border-red-500" : "border-gray-200"
+              } rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
+              id="name"
               type="text"
               placeholder="Name"
+              name="name"
+              onChange={handleChange}
             />
           </div>
-          <div class="w-full md:w-1/2 px-3 mb-6">
+          <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+            <p className="text-red-500 text-xs h-4">{errors.organization}</p>
             <input
-              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              id="grid-last-name"
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              id="organization"
               type="text"
               placeholder="Organization"
+              name="organization"
+              onChange={handleChange}
             />
           </div>
-          <div class="w-full md:w-1/2 px-3 mb-6">
+          <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+            <p className="text-red-500 text-xs h-4">{errors.title}</p>
             <input
-              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              id="grid-last-name"
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              id="title"
               type="text"
               placeholder="Title/Role"
+              name="title"
+              onChange={handleChange}
             />
           </div>
-          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-            <p class="text-red-500 text-xs absolute -my-4 mx-4">
-              Form Field Required
-            </p>
+          <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+            <p className="text-red-500 text-xs h-4">{errors.email}</p>
             <input
-              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-              id="grid-first-name"
-              type="text"
+              className={`appearance-none block w-full bg-gray-200 text-gray-700 border ${
+                errors.email ? "border-red-500" : "border-gray-200"
+              } rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
+              id="email"
+              type="email"
               placeholder="Email"
+              name="email"
+              onChange={handleChange}
             />
           </div>
         </div>
