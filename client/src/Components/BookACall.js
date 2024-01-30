@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "./style.css";
 
@@ -13,6 +13,7 @@ function BookACall() {
     name: "",
     email: "",
   });
+  const [success, setSuccess] = useState(false)
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -33,13 +34,12 @@ function BookACall() {
     }
 
     if (typeof formData["email"] !== "undefined") {
-      var pattern = new RegExp(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/);
+      var pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
       if (!pattern.test(formData["email"])) {
         formIsValid = false;
-        formErrors["email"] = "*Please enter valid email.";
+        formErrors["email"] = "*Please enter a valid email address.";
       }
     }
-
     setErrors(formErrors);
     return formIsValid;
   };
@@ -54,14 +54,16 @@ function BookACall() {
           formData
         );
         console.log(response.data);
+        setSuccess(true)
       } catch (error) {
+        setSuccess(false)
         console.error(error);
       }
     }
   };
   return (
     <div id="BOOK_A_CALL" class=" min-h-auto mb-0 w-full bg-[#F4F4F4]">
-      <div className="BookCall text-center w-5/6 lg:w-3/5 mx-auto">
+      <div className="BookCall text-center w-full lg:w-3/5 mx-auto">
         <h2 className="text-5xl lg:text-6xl font-FatFrank text-[#3C7278] mt-4 overflow-y-hidden">
           book a call
         </h2>
@@ -70,19 +72,18 @@ function BookACall() {
           to understand your franchise goals and see how plant-based options can
           work for your business.
         </p>
-        <p className="text-md font-bold mt-4 w-3/5 m-auto">
+        <p className="text-md font-bold mt-4 w-4/5 md:w-3/5 m-auto">
           Contact us by using the form below to schedule a free assessment or
           book a motivational speaking engagement with Eli.
         </p>
       </div>
-      <form class="w-full max-w-lg mt-12 m-auto" onSubmit={handleSubmit}>
-      <div className="flex flex-wrap -mx-3 mb-6">
+      {success ? <div class="w-full md:max-w-lg mt-12 m-auto"><h1 className="text-center">Your account is registered successfully. We'll get back to you soon!</h1></div> : <form class="w-full max-w-lg mt-12 m-auto" onSubmit={handleSubmit}>
+        <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
             <p className="text-red-500 text-xs h-4">{errors.name}</p>
             <input
-              className={`appearance-none block w-full bg-gray-200 text-gray-700 border ${
-                errors.email ? "border-red-500" : "border-gray-200"
-              } rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
+              className={`appearance-none block w-full bg-gray-200 text-gray-700 border ${errors.email ? "border-red-500" : "border-gray-200"
+                } rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
               id="name"
               type="text"
               placeholder="Name"
@@ -115,9 +116,8 @@ function BookACall() {
           <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
             <p className="text-red-500 text-xs h-4">{errors.email}</p>
             <input
-              className={`appearance-none block w-full bg-gray-200 text-gray-700 border ${
-                errors.email ? "border-red-500" : "border-gray-200"
-              } rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
+              className={`appearance-none block w-full bg-gray-200 text-gray-700 border ${errors.email ? "border-red-500" : "border-gray-200"
+                } rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
               id="email"
               type="email"
               placeholder="Email"
@@ -136,7 +136,8 @@ function BookACall() {
         >
           Submit
         </button>
-      </form>
+      </form>}
+
     </div>
   );
 }

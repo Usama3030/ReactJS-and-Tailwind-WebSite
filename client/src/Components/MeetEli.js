@@ -25,7 +25,7 @@ function MeetEli() {
           <div
             className=" mr-0 ml-[10%] lg:ml-0"
             style={{ marginTop: "5%" }}
-            data-aos="fade-left"
+            data-aos="fade-up"
           >
             <h2 className="text-6xl text-left font-FatFrank text-[#3C7278] mb-4">
               meet eli
