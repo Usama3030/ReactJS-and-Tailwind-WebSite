@@ -37,6 +37,10 @@
   }
 }
 
+body{
+  overflow-x: hidden;
+}
+
 @keyframes slide-top {
   0% {
     -webkit-transform: translateY(100px);
