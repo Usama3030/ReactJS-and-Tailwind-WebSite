@@ -21,23 +21,23 @@ function MeetEliDetail() {
     };
   }, []);
   return (
-    <div className="overflow-hidden">
-      <div data-aos="flip-left">
+    <div className="">
+      <div data-aos="fade-up">
         {image ? (
           <img
             src={meeteli2Img}
             alt="Reload"
-            className="w-[100%] pl-20 h-[102vh] mt-[-80px] z-10"
+            className="w-[100%] pl-8 md:pl-20 h-[102vh] mt-[-80px] z-50 overflow-x-hidden"
           />
         ) : (
           <img
             src={meeteliMobile}
             alt="Reload"
-            className="w-[100%] pl-20 h-auto mt-20 z-10"
+            className="w-[100%] pl-8 md:pl-20 h-auto mt-20 z-10"
           />
         )}
       </div>
-      <div data-aos="zoom-in" className="px-[10%] lg:px-[15%] mt-16 text-center ml-10 z-0">
+      <div data-aos="fade-up" className="px-[10%] lg:px-[15%] mt-16 text-center md:ml-10 z-0">
         <p className="text-center">
           After struggling with years of health issues, including reaching 288
           pounds, undergoing a kidney transplant, and suffering a heart attack
