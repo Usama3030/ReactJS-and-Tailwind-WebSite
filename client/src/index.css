@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "FatFrank";
-  src: local("FatFrank"), url(./assets/fonts/FatFrank.ttf) format("truetype");
+  font-family: 'FatFrank';
+  src: local('FatFrank'), url(./assets/fonts/FatFrank.ttf) format('truetype');
 }
 @font-face {
-  font-family: "AvenirNext";
-  src: local("AvenirNext"),
-    url(./assets/fonts/AvenirNext.otf) format("opentype");
+  font-family: 'AvenirNext';
+  src: local('AvenirNext'),
+    url(./assets/fonts/AvenirNext.otf) format('opentype');
 }
 
 :root {
@@ -37,7 +37,7 @@
   }
 }
 
-body {
+body{
   overflow-x: hidden;
 }
 

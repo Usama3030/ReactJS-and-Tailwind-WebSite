@@ -5,9 +5,7 @@ import layer from "../assets/images/chatBubble.png";
 
 function AskMyCow() {
   const [question, setQuestion] = useState("");
-  const [answer, setAnswer] = useState(
-    "Moo there, partner! I'm Myrtle! Let's have a chat and get you mooooving toward more plant-powered eats!"
-  );
+  const [answer, setAnswer] = useState("Moo there, partner! I'm Myrtle! Let's have a chat and get you mooooving toward more plant-powered eats!");
 
   const handleAskMyrtle = async () => {
     // Perform API call using the 'question' state
@@ -36,16 +34,11 @@ function AskMyCow() {
         <p className="text-md text-center font-semibold mb-8">
           Ask Myrtle a question below!
         </p>
+        
 
         <div className="w-full ml-2 md:mt-[20px] md:ml-20">
-          <img
-            src={layer}
-            alt="reload"
-            className="w-[100%] h-40 md:w-[80%] md:h-40 "
-          />
-          <span className="absolute w-full my-[-120px] text-center md:my-[-120px] md:text-left md:ml-10 text-xs md:text-md lg:text-lg font-black font-AvenirNext">
-            Click on the Bubble below to get started.
-          </span>
+          <img src={layer} alt="reload" className="w-[100%] h-20 md:w-[80%] md:h-40 " />
+          <span className="absolute w-full my-[-60px] ml-12 md:my-[-120px] md:ml-20 text-xs md:text-lg lg:text-xl font-black font-AvenirNext">Click on the Bubble below to get started.</span>
         </div>
       </div>
 
