@@ -44,7 +44,9 @@ module.exports = {
       },
       fontFamily: {
         FatFrank: "FatFrank",
-        AvenirNext: "AvenirNext"
+        AvenirNext: "AvenirNext",
+        AvenirBold: "AvenirBold",
+        FuturaCond: "FuturaCond"
       },
       opacity: {
         80: ".8",

@@ -1,41 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import meeteli2Img from "../assets/images/meeteli2.png";
 import meeteliMobile from "../assets/images/meeteliMobile.png";
 
 function MeetEliDetail() {
-  const [image, setImage] = useState(true);
-
-  const handleResize = () => {
-    if (window.innerWidth >= 768) {
-      setImage(true);
-      console.log(image);
-    } else {
-      setImage(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
     <div className="">
       <div data-aos="fade-up">
-        {image ? (
-          <img
-            src={meeteli2Img}
-            alt="Reload"
-            className="w-[100%] pl-8 md:pl-20 h-[102vh] mt-[-80px] z-50 overflow-x-hidden"
-          />
-        ) : (
-          <img
-            src={meeteliMobile}
-            alt="Reload"
-            className="w-[100%] pl-8 md:pl-20 h-auto mt-20 z-10"
-          />
-        )}
+        <img
+          src={meeteli2Img}
+          alt="Reload"
+          className="hidden md:block w-[100%] pl-8 md:pl-20 h-full md:h-[102vh] mt-[-80px] z-50 overflow-x-hidden"
+        />
+        <img
+          src={meeteliMobile}
+          alt="Reload"
+          className="block md:hidden w-[100%] pl-8 md:pl-20 h-auto mt-20 z-10"
+        />
       </div>
       <div data-aos="fade-up" className="px-[10%] lg:px-[15%] mt-16 text-center md:ml-10 z-0">
         <p className="text-center">

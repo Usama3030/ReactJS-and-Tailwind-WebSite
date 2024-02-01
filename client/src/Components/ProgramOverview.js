@@ -39,7 +39,7 @@ function ProgramOverview() {
 
 const Card = ({ logo, title, text }) => {
   return (
-    <div data-aos="fade-up" className="max-w-sm rounded-xl overflow-hidden shadow-2xl p-6 mb-8 mx-2 mt-4 h-92 w-72 bg-white">
+    <div data-aos="fade-up" className="max-w-sm rounded-xl overflow-hidden shadow-2xl p-6 mb-8 mx-2 mt-4 h-96 w-72 bg-white">
       <div className="text-center mt-4">
         <h2 className="text-4xl text-center font-FatFrank text-[#94A8AE] mb-4 mx-8">
           {title}

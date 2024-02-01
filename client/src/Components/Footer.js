@@ -23,21 +23,27 @@ function Footer() {
         </p>
       </div>
       <div className="icons flex flex-row mx-5 items-center justify-center my-5">
-        <img
-          src={InstagramLogo}
-          alt="InstagramLogo"
-          className="h-8 w-8 mx-4 lg:mx-8"
-        />
-        <img
-          src={FacebookLogo}
-          alt="FacebookLogo"
-          className="h-8 w-8 mx-4 lg:mx-8"
-        />
-        <img
-          src={TwitterLogo}
-          alt="TwitterLogo"
-          className="h-8 w-8 mx-4 lg:mx-8"
-        />
+        <a href="#">
+          <img
+            src={InstagramLogo}
+            alt="InstagramLogo"
+            className="h-8 w-8 mx-4 lg:mx-8"
+          />
+        </a>
+        <a href="#">
+          <img
+            src={FacebookLogo}
+            alt="FacebookLogo"
+            className="h-8 w-8 mx-4 lg:mx-8"
+          />
+        </a>
+        <a href="#">
+          <img
+            src={TwitterLogo}
+            alt="TwitterLogo"
+            className="h-8 w-8 mx-4 lg:mx-8"
+          />
+        </a>
       </div>
       <div className="bg-[#F4F4F4] py-4 text-center">
         <p className="text-xs">© 2024 Me & My Cow. All rights reserved.</p>

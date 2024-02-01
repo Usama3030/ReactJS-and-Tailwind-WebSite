@@ -29,16 +29,16 @@ const Header = () => {
           >
             to plant-based profits
           </h2>
-          <p className="mb-8 text-2xs font-extralight mx-auto lg:text-base md:max-w-lg md:text-base px-4 lg:px-0 md:px-0 tracking-wider">
+          <p className="mb-8 text-2xs font-AvenirNext font-medium mx-auto lg:text-base md:max-w-3xl md:text-base px-4 lg:px-0 md:px-0 tracking-wider">
             We are on a mission to show people in the franchise industry that
             plant-based options are a viable, profitable, and healthful
             alternative to traditional meat-heavy menus.
           </p>
-          <h2 className="text-sm font-bold mb-8 lg:text-md max-w-xs mx-auto lg:max-w-lg md:max-w-lg px-4 lg:px-0 md:px-0">
+          <h2 className="text-sm font-AvenirBold font-extrabold mb-8 lg:text-lg max-w-sm mx-auto lg:max-w-2xl md:max-w-lg px-4 lg:px-0 md:px-0">
             Join us as we moo-ve toward a more compassionate, sustainable
             future.
           </h2>
-          <button className="bg-white hover:bg-[#D9D9D9] text-[#3c7278] font-[Futura PT Cond] font-bold py-2 px-8 mb-28 rounded-xl text-sm lg:text-base md:text-base">
+          <button className="bg-white font-FuturaCond tracking-wider hover:bg-[#D9D9D9] text-[#3c7278] font-bold py-2 px-8 mb-28 rounded-xl text-sm lg:text-2xl md:text-base">
             WHAT IS THIS ALL ABOUT?
           </button>
         </div>

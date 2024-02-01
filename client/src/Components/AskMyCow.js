@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./style.css";
 import AI_cow from "../assets/images/AI_Cow.png";
-import layer from "../assets/images/chatBubble.png";
+import layer from "../assets/images/Vector.png";
 
 function AskMyCow() {
   const [question, setQuestion] = useState("");
@@ -31,14 +31,14 @@ function AskMyCow() {
           plans, and anything else you want to know about choosing and
           nutritious plant-based foods and diets.
         </p>
-        <p className="text-md text-center font-semibold mb-8">
-          Ask Myrtle a question below!
+        <p className="text-md text-center font-semibold mb-8 w-96">
+          Ask Myrtle a question at any time by clicking or tapping the conversation to the left.
         </p>
-        
 
-        <div className="w-full ml-2 md:mt-[20px] md:ml-20">
-          <img src={layer} alt="reload" className="w-[100%] h-20 md:w-[80%] md:h-40 " />
-          <span className="absolute w-full my-[-60px] ml-12 md:my-[-120px] md:ml-20 text-xs md:text-lg lg:text-xl font-black font-AvenirNext">Click on the Bubble below to get started.</span>
+
+        <div className="hidden md:block w-full ml-2 sm:ml-2 mt-8 md:ml-48">
+          <img src={layer} alt="reload" className="w-[100%] h-52 " />
+          <span className="absolute font-AvenirBold w-2/3 lg:w-1/3 my-[-110px] ml-12">Moo there, partner! I'm Myrtle! Let's have a chat and get you mooooving toward more plant-powered eats!"</span>
         </div>
       </div>
 
@@ -46,7 +46,7 @@ function AskMyCow() {
         <img
           src={AI_cow}
           alt="AI_COW"
-          className="h-96 w-80 lg:h-[48rem] mt-[-100px] lg:w-[33rem] z-10"
+          className="h-screen md:h-96 w-screen md:w-80 lg:h-[48rem] mt-[-100px] lg:w-[33rem] z-10"
         />
       </div>
     </div>

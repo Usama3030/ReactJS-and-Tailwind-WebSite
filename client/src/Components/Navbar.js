@@ -54,9 +54,8 @@ const Navbar = () => {
       {(isOpen || isDesktop) &&
         (isOpen ? (
           <div
-            className={`w-screen h-auto bg-[#D9D9D9] absolute top-0 left-0 z-20 flex flex-col items-end justify-end space-y-4 border-b-2 border-gray-300 ${
-              isOpen ? "block" : "hidden"
-            } lg:hidden`}
+            className={`w-screen h-auto bg-[#D9D9D9] absolute top-0 left-0 z-20 flex flex-col items-end justify-end space-y-4 border-b-2 border-gray-300 ${isOpen ? "block" : "hidden"
+              } lg:hidden`}
           >
             {/* Navigation links for mobile */}
             <img
@@ -64,30 +63,30 @@ const Navbar = () => {
               alt="Logo"
               className="h-28 w-auto absolute top-0 left-0 m-2"
             />
-            <div className="h-3/4 w-full pt-32 flex flex-col items-end justify-end space-y-4 overflow-auto">
+            <div className="h-3/4 w-full pt-32 flex flex-col items-end justify-end  overflow-auto">
               {links.map((link, index) => (
                 <a
                   key={index}
                   href={link.href}
-                  className="text-[#3c7278] hover:text-[#3c7278] text-lg w-3/5 mr-2 mb-4 border-b-2 border-[#3B7278] py-3 text-right pr-6 box-border"
-                  style={{ right: "2px" }}
+                  className="text-[#3c7278] font-FuturaCond text-lg w-3/5 mr-2 mb-2 py-3 text-right pr-6 "
+                  // style={{ right: "2px" }}
                 >
                   {link.text}
+                  <hr className="bg-[#3c7278] h-0.5 mt-3  w-40 ml-auto mr-[-3%]" />
                 </a>
               ))}
             </div>
           </div>
         ) : (
           <div
-            className={`space-x-4  m-16 ${
-              isOpen ? "block" : "hidden"
-            } lg:flex lg:items-center lg:space-x-10`}
+            className={`space-x-4  m-16 ${isOpen ? "block" : "hidden"
+              } lg:flex lg:items-center lg:space-x-10`}
           >
             {links.map((link, index) => (
               <a
                 key={index}
                 href={link.href}
-                className="text-white hover:text-gray-300 lg:text-md"
+                className="text-white font-FuturaCond text:md  hover:text-gray-300 lg:text-2xl"
               >
                 {link.text}
               </a>
