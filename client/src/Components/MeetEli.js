@@ -4,13 +4,13 @@ import meeteliImg from "../assets/images/meeteli.png";
 
 function MeetEli() {
   return (
-    <div className="flex flex-col-reverse sm:flex z-0 sm:flex-col-reverse md:flex md:flex-row lg:flex lg:flex-row overflow-hidden">
+    <div className="flex flex-col-reverse sm:flex z-0 sm:flex-col-reverse md:flex md:flex-row lg:flex lg:flex-row ">
       <div data-aos="fade-up" className="w-full">
         <img
           src={meeteliImg}
           alt="reload"
           className="md:mx-36 mx-10"
-          style={{ height: "80vh", width: "85%" }}
+          style={{ height: "80vh", width: "80%" }}
         />
       </div>
       <div
@@ -30,7 +30,7 @@ function MeetEli() {
             <h2 className="text-6xl text-left font-FatFrank text-[#3C7278] mb-4">
               meet eli
             </h2>
-            <p className="w-full  md:w-4/5 font-AvenirNext text-left text-lg leading-6 font-medium">
+            <p className="mb-8 text-2xs font-AvenirNext font-medium mx-auto lg:text-base md:max-w-3xl md:text-base px-4 lg:px-0 md:px-0 tracking-wider">
               Eli Chediak went on his own journey toward plant-based eating
               after struggling with weight and health issues for years while
               working on the road as an expert in franchising. After switching

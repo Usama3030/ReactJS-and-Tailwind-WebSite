@@ -11,6 +11,16 @@
   src: local('AvenirNext'),
     url(./assets/fonts/AvenirNext.otf) format('opentype');
 }
+@font-face {
+  font-family: 'AvenirBold';
+  src: local('AvenirBold'),
+    url(./assets/fonts/AvenirBold.otf) format('opentype');
+}
+@font-face {
+  font-family: 'FuturaCond';
+  src: local('FuturaCond'),
+    url(./assets/fonts/FuturaCond.woff) format('woff');
+}
 
 :root {
   --black-gradient: linear-gradient(

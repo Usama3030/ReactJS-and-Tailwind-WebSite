@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import "./assets/fonts/FatFrank.ttf"
 import "./assets/fonts/AvenirNext.otf"
+import "./assets/fonts/FuturaCond.woff"
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

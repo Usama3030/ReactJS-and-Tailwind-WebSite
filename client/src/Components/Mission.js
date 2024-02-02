@@ -23,17 +23,17 @@ function Mission() {
           className="z-2 mr-0 ml-[12%] lg:ml-[25%]"
           style={{ marginTop: "5%" }}
         >
-          <h2 data-aos="fade-up" className="text-5xl lg:text-8xl font-FatFrank text-left text-[#3C7278] mb-4">
+          <h2 data-aos="fade-up" className="text-6xl text-left font-FatFrank text-[#3C7278] mb-4">
             our mission
           </h2>
-          <p data-aos="fade-up" className="w-4/5 text-left text-xs font-medium">
+          <p data-aos="fade-up" className="mb-8 text-2xs font-AvenirNext font-medium mx-auto lg:text-base md:max-w-3xl md:text-base px-4 lg:px-0 md:px-0 tracking-wider">
             Our mission at Me and My Cow is to create healthy communities by
             making plant-based eating easy and accessible. We believe that with
             education, understanding, and delicious food, people can shift
             mindsets and cravings toward plant-based options that nurture our
             health and the health of our planet.
           </p>
-          <p data-aos="fade-up" className="font-bold my-4 text-left">
+          <p data-aos="fade-up" className="font-AvenirBold my-4 text-left">
             Cows are friends, not food!
           </p>
         </div>
