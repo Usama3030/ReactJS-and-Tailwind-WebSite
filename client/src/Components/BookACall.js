@@ -79,21 +79,21 @@ function BookACall() {
             </div>
           ) : (
             <>
-              <div className="BookCall text-center w-5/6 lg:w-3/5 mx-auto">
-                <h2 className="text-5xl lg:text-6xl font-FatFrank text-[#3C7278] mt-4 overflow-y-hidden">
+              <div className="BookCall text-center w-5/6 lg:w-3/5 pt-16 mx-auto">
+                <h2 data-aos="fade-up" className="text-5xl lg:text-6xl font-FatFrank text-[#3C7278] mt-4 overflow-y-hidden">
                   book a call
                 </h2>
-                <p className="text-md mt-4 w-[95%] m-auto">
+                <p data-aos="fade-up" className="text-md mt-4 w-[95%] m-auto">
                   Ready to learn more? Get in touch! We would love to connect with you
                   to understand your franchise goals and see how plant-based options can
                   work for your business.
                 </p>
-                <p className="text-md font-bold mt-4 w-[95%] m-auto">
+                <p data-aos="fade-up" className="text-md font-bold mt-4 w-[95%] m-auto">
                   Contact us by using the form below to schedule a free assessment or
                   book a motivational speaking engagement with Eli.
                 </p>
               </div>
-              <form class="w-full max-w-lg mt-12 m-auto" onSubmit={handleSubmit}>
+              <form data-aos="fade-down" class="w-full max-w-lg mt-12 m-auto" onSubmit={handleSubmit}>
                 <div className="flex flex-wrap mx-3 mb-6">
                   <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                     <p className="text-red-500 text-xs h-4">{errors.name}</p>
@@ -148,8 +148,7 @@ function BookACall() {
                 <button
                   id="Question"
                   type="submit"
-                  className="bg-gradient-to-r from-greenSlack-100 to-greenSlack-600 hover:bg-gradient-to-r hover:from-greenSlack-200 hover:to-greenSlack-400 block text-white font-mono m-auto py-1 px-4 mb-11 mt-2 rounded-lg"
-                >
+                  className="bg-gradient-to-r from-greenSlack-100 to-greenSlack-600 hover:bg-gradient-to-r hover:from-greenSlack-200 hover:to-greenSlack-400 block text-white font-mono m-auto py-1 px-4 mb-11 mt-2 rounded-lg">
                   Submit
                 </button>
               </form>

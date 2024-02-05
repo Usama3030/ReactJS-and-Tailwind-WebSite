@@ -21,28 +21,28 @@ function AskMyCow() {
       id="ASK_MY_COW"
       className="min-h-auto mt-4 mb-0 text-white bg-gradient-to-r from-greenSlack-100 to-greenSlack-600 flex flex-col md:flex md:flex-row w-full"
     >
-      <div className="left w-full flex flex-col items-center pt-20 pl-8 md:pl-20 p-8">
-        <h2 className="text-5xl lg:text-6xl text-center font-FatFrank mb-4 overflow-y-hidden">
-          ask my cow
-        </h2>
-        <p className="text-sm w-full lg:w-4/6 font-AvenirNext text-center mb-4">
-          Got questions on going plant-based? Meet Myrtle, our AI-powered cow
-          chatbot ready to moo at you with helpful tips, recipe ideas, meal
-          plans, and anything else you want to know about choosing and
-          nutritious plant-based foods and diets.
-        </p>
-        <p className="text-md text-center font-semibold mb-8 w-96">
-          Ask Myrtle a question at any time by clicking or tapping the conversation to the left.
-        </p>
+      <div className="left w-full flex flex-col items-center pt-32 pl-8 md:pl-20 p-8">
+          <h2 data-aos="fade-up" className="text-5xl lg:text-6xl text-center font-FatFrank mb-4 overflow-y-hidden">
+            ask my cow
+          </h2>
+          <p data-aos="fade-up" className="text-sm w-full lg:w-4/6 font-AvenirNext text-center mb-4">
+            Got questions on going plant-based? Meet Myrtle, our AI-powered cow
+            chatbot ready to moo at you with helpful tips, recipe ideas, meal
+            plans, and anything else you want to know about choosing and
+            nutritious plant-based foods and diets.
+          </p>
+          <p data-aos="fade-up" className="text-md text-center font-semibold mb-8 w-96">
+            Ask Myrtle a question at any time by clicking or tapping the conversation to the left.
+          </p>
 
 
-        <div className="hidden md:block w-full ml-2 sm:ml-2 mt-8 md:ml-48">
-          <img src={layer} alt="reload" className="w-[100%] h-52 " />
-          <span className="absolute font-AvenirBold w-2/3 lg:w-1/3 my-[-110px] ml-12">Moo there, partner! I'm Myrtle! Let's have a chat and get you mooooving toward more plant-powered eats!"</span>
+        <div className="hidden md:block w-full ml-2 sm:ml-2 md:ml-48">
+          <img data-aos="fade-up" src={layer} alt="reload" className="w-[100%] h-52 " />
+          <span data-aos="fade-up" className="absolute font-AvenirBold w-2/3 lg:w-1/3 my-[-95px] text-center ml-12">Moo there, partner! I'm Myrtle! Let's have a chat and get you mooooving toward more plant-powered eats!"</span>
         </div>
       </div>
 
-      <div className="right w-full mt-24 md:mt-auto flex items-center justify-center lg:justify-start">
+      <div data-aos="fade-right" className="right w-full mt-24 md:mt-auto flex items-center justify-center lg:justify-start">
         <img
           src={AI_cow}
           alt="AI_COW"
