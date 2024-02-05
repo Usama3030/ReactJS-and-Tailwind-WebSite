@@ -9,8 +9,8 @@ function MeetEli() {
         <img
           src={meeteliImg}
           alt="reload"
-          className="md:mx-36 mx-10"
-          style={{ height: "80vh", width: "80%" }}
+          className="mx-auto h-80 w-80 md:h-5/6 md:w-5/6 md:mx-36"
+          // style={{ height: "80vh", width: "80%" }}
         />
       </div>
       <div

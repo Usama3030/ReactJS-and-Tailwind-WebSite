@@ -38,8 +38,8 @@ const Header = () => {
             Join us as we moo-ve toward a more compassionate, sustainable
             future.
           </h2>
-          <button className="bg-white font-FuturaCond tracking-wider hover:bg-[#D9D9D9] text-[#3c7278] font-bold py-2 px-8 mb-28 rounded-xl text-sm lg:text-2xl md:text-base">
-            WHAT IS THIS ALL ABOUT?
+          <button  className="bg-white font-FuturaCond tracking-wider hover:bg-[#D9D9D9] text-[#3c7278] font-bold py-2 px-8 mb-28 rounded-xl text-sm lg:text-2xl md:text-base">
+            <a href="#OUR_MISSION">WHAT IS THIS ALL ABOUT?</a>
           </button>
         </div>
       </div>

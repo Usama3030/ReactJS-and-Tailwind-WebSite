@@ -18,7 +18,7 @@ function MeetEliDetail() {
         />
       </div>
       <div data-aos="fade-up" className="px-[10%] lg:px-[15%] mt-16 text-center md:ml-10 z-0">
-        <p className="text-center">
+        <p className="mb-8 text-2xs font-AvenirNext font-medium mx-auto lg:text-base md:max-w-6xl md:text-base lg:px-0 md:px-0 tracking-wider">
           After struggling with years of health issues, including reaching 288
           pounds, undergoing a kidney transplant, and suffering a heart attack
           at the young age of 45, I knew I needed to make a radical change.
@@ -28,7 +28,7 @@ function MeetEliDetail() {
           pounds and brought all of my health numbers into normal ranges in just
           a few short months.
         </p>
-        <p className="text-center mt-4">
+        <p className="mb-8 text-2xs font-AvenirNext font-medium mx-auto lg:text-base md:max-w-6xl md:text-base lg:px-0 md:px-0 tracking-wider">
           My transformation sparked in me a passion for helping others take
           control of their health. I want to provide the knowledge and tools for
           people to prevent and even reverse disease through diet and lifestyle
@@ -37,7 +37,7 @@ function MeetEliDetail() {
           empower us and future generations to lead vibrant, healthy lives while
           also preserving our planet.{" "}
         </p>
-        <p className="text-center font-bold text-md mt-4 -ml-10">
+        <p className="text-center font-bold text-md mt-4 mx-auto">
           I couldn’t be more thrilled to walk this journey with you!
         </p>
       </div>
