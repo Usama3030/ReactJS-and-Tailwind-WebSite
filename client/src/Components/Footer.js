@@ -8,7 +8,10 @@ function Footer() {
   return (
     <div id="FOOTER" class="pt-12 min-h-auto w-full bg-white">
       <div className="Footer text-center w-5/6 lg:w-3/5 mx-auto">
-        <h2 data-aos="fade-up" className="text-5xl lg:text-6xl font-FatFrank text-[#94A8AE] overflow-y-hidden">
+        <h2
+          data-aos="fade-up"
+          className="text-5xl lg:text-6xl font-FatFrank text-[#94A8AE] overflow-y-hidden"
+        >
           join the herd on social
         </h2>
         <p data-aos="fade-up" className="text-md mt-4 font-AvenirNext">
@@ -22,7 +25,8 @@ function Footer() {
           Come be a part of our #PlantBasedHerd!
         </p>
       </div>
-      <div data-aos="fade-down" className="icons flex flex-row mx-5 items-center justify-center my-5">
+      {/* <div data-aos="fade-down" className="icons flex flex-row mx-5 items-center justify-center my-5"> */}
+      <div className="icons flex flex-row mx-5 items-center justify-center my-5">
         <a href="#">
           <img
             src={InstagramLogo}
