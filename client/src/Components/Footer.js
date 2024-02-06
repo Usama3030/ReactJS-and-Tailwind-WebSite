@@ -22,7 +22,7 @@ function Footer() {
           Come be a part of our #PlantBasedHerd!
         </p>
       </div>
-      <div data-aos="fade-down" className="icons flex flex-row mx-5 items-center justify-center my-5">
+      <div className="icons flex flex-row mx-5 items-center justify-center my-5">
         <a href="#">
           <img
             src={InstagramLogo}
